@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tour Places</title>
+    <link rel="stylesheet" type="text/css" href="site.css">
+</head>
+
+<body>
+
+    <!-- create tourist place form -->
+
+    <div id="add-new-div">
+        <h2 class="add-new-title" id="name-new-title"> Add New Tourist Place</h2>
+        <div class="row">
+            <div class="col-lbl">
+                <label for="name" class="input-lbl"> Name:</label>
+            </div>
+            <div class="col-txt">
+                <input type="text" id="name" class="input-txt" name="name">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lbl">
+                <label for="address" class="input-lbl"> Address:</label>
+            </div>
+            <div class="col-txt">
+                <input type="text" id="address" class="input-txt" name="address">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lbl">
+                <label for="rating" class="input-lbl"> Rating:</label>
+            </div>
+            <div class="col-txt">
+                <select id="rating" class="input-txt" name="rating">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select> 
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lbl">
+                <label for="pic" class="input-lbl"> Picture:</label>
+            </div>
+            <div class="col-txt">
+                <input type="file" id="pic" class="input-txt" name="pic">
+            </div>
+        </div>
+
+        <div class="row" id="submit-div">
+            <button class="add-new-button" onclick="addPlace()"> Submit</button>
+            <button class="add-new-reset" onclick="resetForm()"> Reset</button>
+        </div>
+
+        <div>
+            <a class="back" href="#" onclick="showTable()">Back to Tourist Place List</a>
+        </div> 
+    </div>
+
+    <!-- Tour places table -->
+
+    <div id="tour-places-div">
+        <table class="tablePlace" id="table-places">
+            <thead>
+                <tr>
+                    <th class="name-col name-col-header">NAME</th>
+                    <th class="address-col">ADDRESS</th>
+                    <th class="rating-col">RATING</th>
+                    <th class="pic-col">PICTURE</th>
+                </tr>
+            </thead>
+            <tbody id="table-places-tbody">
+                
+            </tbody>
+
+        </table>
+        <input type="button" value="Create New Tourist Place" class="backButton" onclick="BackToaddPlace()">
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
