@@ -1,0 +1,435 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- or -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+
+
+    <title>Bootstrap Cheat Sheet</title>
+</head>
+
+
+<!--
+    
+NOTES FOR BOOTSTRAP 4:
+    1. page-header alternative in bootstrap4: class="pb-2 mt-4 mb-2 border-bottom"
+    2. pull-right => float-right
+    3. blockquote-reverse can be imitated with "blockquote text-right"
+    4. list-inline -> add class="list-inline-item" to each one of your <li> elements and that'll work.
+    5. Button sizing: btn-xs is not available in bootstrap4, there are only btn-lg and btn-sm classes.
+    6. Instead of <p class="help-block">text</p>, use <small class="form-text text-muted">text</small>
+    7. table-condensed -> table-sm
+    8. for row(tr) colouring use 'table-primary', 'table-danger', etc, just like the buttons
+    9. Panels in bootstrap 4 seem to have become Cards.
+    10. progress-bar-success -> bg-success
+    11. animated progress bar(active) -> progress-bar-animated
+    12. thumbnail -> img-thumbnail, img-rounded -> rounded, img-circle -> rounded-circle
+-->
+
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-inverse">
+
+        <div class="container">
+            <a class="navbar-brand" href="#">Boootstrap Cheat Sheet</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- Jumbotron-->
+    <div class="jumbotron text-center">
+        <div class="container">
+            <h1>Welcome to my Website</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a href="#" class="btn btn-primary">Read more</a>
+        </div>
+    </div>
+
+
+    <!-- TYPOGRAPHY -->
+    <div class="container">
+        <h1 class="page-header"> Hello, world! <small> Secondary Text </small></h1>
+        <p class="lead"> As we were <u>planning</u> and designing <b>sites</b>, we noticed that many of our clients were asking for similar functionality which pushed the limits of what we were able to achieve easily with standard site building techniques in Drupal. </p>
+        <p> A popular request was for <mark>"edge to edge"</mark> designs which allowed editors to control background colours and styling for landscape style widgets. <del>Clients were also wanting to have a lot of control over the kinds of widgets which were being created, their ordering and positioning</del>. Sometimes these widgets would have somewhat complex functionality and data to support.</p>
+
+        <hr>
+
+        <!-- Aignment && Transformation -->
+        <p class="text-left text-lowercase">Left Aligned Text</p>
+        <p class="text-center text-uppercase">Center Aligned Text</p>
+        <p class="text-right">Right Aligned Text</p>
+        <p class="text-justify text-capitalize">We naturally got lots of practice implementing these various features. By the time the fourth site rolled around we were experts. At that point we decided to distribute a number of contrib modules to make the whole process a lot easier the next time we needed to do it. The Paragraphs Demo site demonstrates these various modules and the creative possibilities which become available for content creators and designers. So far we have implemented plugable systems to support various widgets, backgrounds and behaviours. It is now very easy for content creators to add their own background images and parallax effects. Designers can also easily add in various Javascript effects to spice up their designs.</p>
+        <p class="text-nowrap">
+            We naturally got lots of practice implementing these various features.
+            By the time the fourth site rolled around we were experts. At that point we decided to distribute
+            a number of contrib modules to make the whole process a lot easier the next time we needed to do it.
+        </p>
+
+        <!-- Quick Float-->
+
+        <div class="pull-right">Div floated to right</div>
+        <div class="pull-left">Div floated to left</div>
+
+        <!-- Clear Float-->
+
+        <div class="clearfix"></div>
+
+        <hr>
+
+        <!-- Blockquote -->
+        <blockquote class="blockquote-reverse">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <footer> Quote by <cite title="Caliph"> Caliph</cite></footer>
+        </blockquote>
+
+        <hr>
+
+        <!-- Lists -->
+
+        <ul class="list-unstyled">
+            <li> Item one </li>
+            <li> Item two</li>
+            <li> Item three </li>
+            <li> Item four </li>
+        </ul>
+
+        <ul class="list-inline">
+            <li> Item one </li>
+            <li> Item two</li>
+            <li> Item three </li>
+            <li> Item four </li>
+        </ul>
+
+        <!--Code-->
+        <code>&lt;h1&gt; Heading Text &lt;/h1&gt;</code>
+        Change directory with <kbd>cd</kbd>
+        <br>
+        To edit settings, press <kbd>ctrl + ,</kbd>
+
+        <hr>
+
+        <!-- Contextual Colors -->
+
+        <p class="text-primary"> Hello World</p>
+        <p class="text-success"> Hello World</p>
+        <p class="text-info"> Hello World</p>
+        <p class="text-warning"> Hello World</p>
+        <p class="text-danger"> Hello World</p>
+        <p class="text-muted"> Hello World</p>
+
+        <!-- Contextual Background Colors -->
+
+        <p class="bg-primary"> Hello World</p>
+        <p class="bg-success"> Hello World</p>
+        <p class="bg-info"> Hello World</p>
+        <p class="bg-warning"> Hello World</p>
+        <p class="bg-danger"> Hello World</p>
+        <p class="bg-muted"> Hello World</p>
+    </div>
+
+    <hr>
+
+    <div class="container">
+
+        <!-- Buttons -->
+
+        <button class="btn btn-default"> Default </button>
+        <a href="#" class="btn btn-default" role="button"> Link </a>
+        <input type="submit" class="btn btn-default" value="Submit">
+        <br><br>
+
+
+        <!-- Contextual Buttons -->
+        <button class="btn btn-link"> Link </button>
+        <button class="btn btn-primary"> Primary </button>
+        <button class="btn btn-success"> Success </button>
+        <button class="btn btn-info"> Info </button>
+        <button class="btn btn-warning"> Warning</button>
+        <button class="btn btn-danger"> Danger</button>
+
+        <br><br>
+
+        <!-- Button sizes -->
+        <button class="btn btn-default btn-lg"> Default </button>
+        <button class="btn btn-default"> Default </button>
+        <button class="btn btn-default btn-sm"> Default </button>
+        <button class="btn btn-default btn-xs"> Default </button>
+        <button class="btn btn-default" disabled="disabled"> Default </button>
+
+    </div>
+
+    <hr>
+    <!-- Forms -->
+
+    <div class="container">
+
+        <form>
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control" placeholder="First Name" />
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" class="form-control" placeholder="Enter E-mail Address" />
+            </div>
+            <div class="form-group">
+                <label>Comments</label>
+                <textarea class="form-control" placeholder="Add your comments"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Gender</label>
+                <select class="form-control">
+                    <option value="male"> Male </option>
+                    <option value="female"> Female </option>
+                    <option value="others"> Others </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Upload File</label>
+                <input type="file">
+                <p class="help-block">Only pdf files Allowed</p>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> Check me out
+                </label>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        <hr>
+
+        <!-- Inline Form-->
+
+        <form class="form-inline">
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" class="form-control" placeholder="Email " />
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" placeholder="  Password " />
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> Remember me
+                </label>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+
+    </div>
+    <hr>
+
+
+
+    <!-- Tables -->
+
+    <div class="container">
+        <table class="table table-striped table-bordered table-hover table-condensed">
+            <tr>
+                <th>Company</th>
+                <th>Contact</th>
+                <th>Country</th>
+            </tr>
+            <tr class="danger">
+                <td>Alfreds Futterkiste</td>
+                <td>Maria Anders</td>
+                <td>Germany</td>
+            </tr>
+            <tr>
+                <td>Centro comercial Moctezuma</td>
+                <td>Francisco Chang</td>
+                <td>Mexico</td>
+            </tr>
+            <tr class="success">
+                <td>Ernst Handel</td>
+                <td>Roland Mendel</td>
+                <td>Austria</td>
+            </tr>
+            <tr>
+                <td>Island Trading</td>
+                <td>Helen Bennett</td>
+                <td>UK</td>
+            </tr>
+            <tr>
+                <td>Laughing Bacchus Winecellars</td>
+                <td>Yoshi Tannamuri</td>
+                <td>Canada</td>
+            </tr>
+            <tr>
+                <td>Magazzini Alimentari Riuniti</td>
+                <td>Giovanni Rovelli</td>
+                <td>Italy</td>
+            </tr>
+        </table>
+    </div>
+
+    <hr>
+    <!--List Group-->
+
+    <div class="container">
+        <ul class="list-group">
+            <li class="list-group-item">Item one</li>
+            <li class="list-group-item">Item two</li>
+            <li class="list-group-item">Item three</li>
+        </ul>
+        <br><br>
+        <ul class="list-group">
+            <a href="#" class="list-group-item" active>Item one</a>
+            <a href="#" class="list-group-item" list-group-item-success> Item two </a>
+            <a href="#" class="list-group-item">Item three</a>
+            <a href="#" class="list-group-item disabled">Item four</a>
+        </ul>
+    </div>
+
+    <hr>
+
+
+    <div class="container">
+
+        <!-- Panels -->
+
+
+        <div class="panel panel-primary">
+            <h3 class="panel-title">Panel Title</h3>
+        </div>
+        <div class="panel-body">
+            Panel content
+        </div>
+        <div class="panel-footer">
+            Panel Footer
+        </div>
+
+        <!-- Wells -->
+
+        <div class="well"> Hello World </div>
+        <div class="well well-lg"> Hello World </div>
+        <div class="well well-sm"> Hello World </div>
+
+        <!-- Alerts -->
+        <div class="alert alert-success" role="alert">A success alert</div>
+        <div class="alert alert-info" role="alert">An info alert</div>
+        <div class="alert alert-warning" role="alert">A warning alert</div>
+        <div class="alert alert-danger" role="alert">A danger alert</div>
+
+        <div class="alert alert-warning alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert"><span>&times;</span></button>
+            Close me
+        </div>
+
+        <!-- Progress Bar-->
+
+        <div class="progress">
+            <div class="progress-bar progress-bar-success progress-bar-striped active" style="width:50%;">
+                50%
+            </div>
+        </div>
+        <hr>
+
+        <!--Labels -->
+        <span class="label label-default">Default</span>
+        <h1>Hello <span class="label label-primary">Primary</span></h1>
+        <span class="label label-info">Info</span>
+        <span class="label label-warning">Warning</span>
+        <span class="label label-danger">Danger</span>
+
+        <!-- Badges -->
+        <a href="#">Inbox <span class="badge">50</span></a>
+        <button classs="btn btn-primary" type="button">
+            Messages <span class="badge">2</span>
+        </button>
+    </div>
+
+    <!-- Images -->
+
+    <div class="container">
+        <img class="thumbnail" src="https://via.placeholder.com/150" />
+        <img class="img-rounded" src="https://via.placeholder.com/150" />
+        <img class="img-circle" src="https://via.placeholder.com/150" />
+    </div>
+
+    <hr>
+    <!-- Grid System-->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-8 col-xs-8">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec volutpat justo, et bibendum quam. Aliquam in augue eu leo ultrices pulvinar id eget sapien. Aliquam a tristique arcu. Etiam laoreet odio quis sollicitudin blandit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam vulputate eu erat at venenatis. Nam posuere, erat nec elementum feugiat, quam massa imperdiet odio, sed laoreet lacus est sed dui. Etiam rutrum dignissim tempus. Ut varius metus mattis, vehicula dui a, dapibus nunc. Curabitur lobortis nibh eu venenatis finibus. Suspendisse at dolor ut erat pretium eleifend quis eget velit. Maecenas at ullamcorper elit.</p>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-4">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec volutpat justo, et bibendum quam. Aliquam in augue eu leo ultrices pulvinar id eget sapien. Aliquam a tristique arcu. Etiam laoreet odio quis sollicitudin blandit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-3">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec volutpat justo, et bibendum quam. Aliquam in augue eu leo ultrices pulvinar id eget sapien. Aliquam a tristique arcu. Etiam laoreet odio quis sollicitudin blandit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
+            </div>
+            <div class="col-md-3">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec volutpat justo, et bibendum quam. Aliquam in augue eu leo ultrices pulvinar id eget sapien. Aliquam a tristique arcu. Etiam laoreet odio quis sollicitudin blandit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
+            </div>
+            <div class="col-md-3">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec volutpat justo, et bibendum quam. Aliquam in augue eu leo ultrices pulvinar id eget sapien. Aliquam a tristique arcu. Etiam laoreet odio quis sollicitudin blandit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
+            </div>
+            <div class="col-md-3">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec volutpat justo, et bibendum quam. Aliquam in augue eu leo ultrices pulvinar id eget sapien. Aliquam a tristique arcu. Etiam laoreet odio quis sollicitudin blandit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <div style="height:400px"></div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
