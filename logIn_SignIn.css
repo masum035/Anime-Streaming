@@ -1,0 +1,36 @@
+.form-wrapper-of-Registration {
+    background-image: url("http://getwallpapers.com/wallpaper/full/e/7/9/95252.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    max-width: 100%;
+    height: auto;
+}
+.form-wrapper-for-LogIn{
+    background-image:  url("images/re-zero-for-logIn.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    max-width: 100%;
+    height: auto;
+}
+.login-left{
+    /*	background   : rgba(211,211,211,0.5);   */
+    padding      : 30px;
+}
+.login-right{
+    /*background   : rgba(211,211,211,0.5);  */
+    padding      : 30px;
+}
+.form-control{
+    background-color : transparent;
+}
+.login-box{
+    max-width   : 950px;
+    float       : none;
+    margin      : 50px auto;
+}
+.loginStyle{
+    margin-left: 2%;
+    padding-left: 1%;
+}
